@@ -343,283 +343,337 @@
     // } else{
     //     echo "Liczba $number nie jest typu string.";
     // }
-    echo "Pierwsze:<br>";
+    // echo "Pierwsze:<br>";
 
-    $conn = new mysqli(("localhost"), "root", "", "c_pracownicy");
-    if ($conn->connect_error) {
-        die("Błąd " . $conn->connect_error);
+    // $conn = new mysqli(("localhost"), "root", "", "c_pracownicy");
+    // if ($conn->connect_error) {
+    //     die("Błąd " . $conn->connect_error);
+    // }
+    // $stanowisko = "asystent";
+    // $stmt = $conn->prepare("SELECT * FROM pracownicy WHERE nazwisko='Kowalski'");
+    // $stmt->execute();
+    // $stmt->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt->store_result();
+
+    // if ($stmt->num_rows > 0) {
+    //     while ($stmt->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt->close();
+
+    // echo "<br><br>";
+    // echo "Drugie:<br>";
+
+    // $stmt1 = $conn->prepare("SELECT * FROM pracownicy WHERE placa <1600");
+    // $stmt1->execute();
+    // $stmt1->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt1->store_result();
+
+    // if ($stmt1->num_rows > 0) {
+    //     while ($stmt1->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt1->close();
+
+    // echo "<br><br>";
+    // echo "Drugie:<br>";
+
+    // $stmt2 = $conn->prepare("SELECT * FROM pracownicy WHERE id>=3 AND id<=6");
+    // $stmt2->execute();
+    // $stmt2->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt2->store_result();
+
+    // if ($stmt2->num_rows > 0) {
+    //     while ($stmt2->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt2->close();
+
+    // echo "<br><br>";
+
+    // echo "Trzecie:<br>";
+    // $stmt3 = $conn->prepare("SELECT * FROM pracownicy WHERE id BETWEEN 3 AND 6");
+    // $stmt3->execute();
+    // $stmt3->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt3->store_result();
+
+    // if ($stmt3->num_rows > 0) {
+    //     while ($stmt3->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt3->close();
+    // echo "<br><br>";
+    // echo "Czwarte:<br>";
+
+    // $stmt4 = $conn->prepare("SELECT * FROM pracownicy WHERE placa BETWEEN 1400 AND 1600 ORDER BY placa");
+    // $stmt4->execute();
+    // $stmt4->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt4->store_result();
+
+    // if ($stmt4->num_rows > 0) {
+    //     while ($stmt4->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt4->close();
+    // echo "<br><br>";
+    // echo "Piąte:<br>";
+
+    // $stmt5 = $conn->prepare("SELECT * FROM pracownicy WHERE placa BETWEEN 1400 AND 1600 ORDER BY placa");
+    // $stmt5->execute();
+    // $stmt5->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt5->store_result();
+
+    // if ($stmt5->num_rows > 0) {
+    //     while ($stmt5->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt5->close();
+
+    // echo "<br><br>";
+    // echo "Szóste:<br>";
+    // $stmt6 = $conn->prepare("SELECT * FROM pracownicy WHERE id IN(3,5,7)");
+    // $stmt6->execute();
+    // $stmt6->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt6->store_result();
+
+    // if ($stmt6->num_rows > 0) {
+    //     while ($stmt6->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt6->close();
+    // echo "<br><br>";
+    // echo "Siódme:<br>";
+
+    // $stmt7 = $conn->prepare("SELECT * FROM pracownicy WHERE imie LIKE 'Ka%'");
+    // $stmt7->execute();
+    // $stmt7->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt7->store_result();
+
+    // if ($stmt7->num_rows > 0) {
+    //     while ($stmt7->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt7->close();
+    // echo "<br><br>";
+    // echo "Ósme:<br>";
+
+    // $stmt8 = $conn->prepare("SELECT * FROM pracownicy WHERE imie LIKE 'Ka%'");
+    // $stmt8->execute();
+    // $stmt8->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt8->store_result();
+
+    // if ($stmt8->num_rows > 0) {
+    //     while ($stmt8->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt8->close();
+    // echo "<br><br>";
+    // echo "Dziewiąte:<br>";
+
+    // $stmt9 = $conn->prepare("SELECT * FROM pracownicy WHERE placa>1400 AND stanowisko <>'kierownik' AND pesel IS NOT NULL");
+    // $stmt9->execute();
+    // $stmt9->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt9->store_result();
+
+    // if ($stmt9->num_rows > 0) {
+    //     while ($stmt9->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt9->close();
+
+
+    // echo "<br><br>";
+    // echo "Dziesiąte: <br>";
+
+    // $stmt10 = $conn->prepare("SELECT nazwisko FROM pracownicy ORDER BY nazwisko");
+    // $stmt10->execute();
+    // $stmt10->bind_result($nazwisko);
+    // $stmt10->store_result();
+
+    // if ($stmt10->num_rows > 0) {
+    //     while ($stmt10->fetch()) {
+    //         echo "Nazwisko: $nazwisko<br>";
+    //     }
+    // }
+    // $stmt10->close();
+
+    // echo "<br><br>";
+    // echo "Jedenaste: <br>";
+
+    // $stmt11 = $conn->prepare("SELECT DISTINCT nazwisko FROM pracownicy ORDER BY nazwisko");
+    // $stmt11->execute();
+    // $stmt11->bind_result($nazwisko);
+    // $stmt11->store_result();
+
+    // if ($stmt11->num_rows > 0) {
+    //     while ($stmt11->fetch()) {
+    //         echo "Nazwisko: $nazwisko<br>";
+    //     }
+    // }
+    // $stmt11->close();
+    // echo "<br><br>";
+    // echo "Dwunaste: <br>";
+
+    // $stmt12 = $conn->prepare("SELECT * FROM pracownicy ORDER BY nazwisko LIMIT 5");
+    // $stmt12->execute();
+    // $stmt12->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt12->store_result();
+
+    // if ($stmt12->num_rows > 0) {
+    //     while ($stmt12->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt12->close();
+
+    // echo "<br><br>";
+    // echo "Trzynaste: <br>";
+
+    // $stmt13 = $conn->prepare("SELECT * FROM pracownicy ORDER BY nazwisko  limit 3 offset 4");
+    // $stmt13->execute();
+    // $stmt13->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt13->store_result();
+
+    // if ($stmt13->num_rows > 0) {
+    //     while ($stmt13->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt13->close();
+    // echo "<br><br>";
+
+    // echo "Czternaste: <br>";
+    // $stmt14 = $conn->prepare("SELECT DISTINCT stanowisko FROM pracownicy WHERE stanowisko LIKE '%k%'");
+    // $stmt14->execute();
+    // $stmt14->bind_result($stanowisko);
+    // $stmt14->store_result();
+
+    // if ($stmt14->num_rows > 0) {
+    //     while ($stmt14->fetch()) {
+    //         echo "Stanowisko: $stanowisko<br>";
+    //     }
+    // }
+    // $stmt14->close();
+
+    // echo "<br><br>";
+    // echo "Piętnaste: <br>";
+    // $stmt15 = $conn->prepare("SELECT * FROM pracownicy WHERE nazwisko LIKE '%ski' ORDER BY imie");
+    // $stmt15->execute();
+    // $stmt15->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt15->store_result();
+
+    // if ($stmt15->num_rows > 0) {
+    //     while ($stmt15->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt15->close();
+
+    // echo "<br><br>";
+    // echo "Szesnaste: <br>";
+    // $stmt16 = $conn->prepare("SELECT DISTINCT placa FROM pracownicy WHERE imie LIKE 'A%' OR imie LIKE 'K%'");
+    // $stmt16->execute();
+    // $stmt16->bind_result($placa);
+    // $stmt16->store_result();
+
+    // if ($stmt16->num_rows > 0) {
+    //     while ($stmt16->fetch()) {
+    //         echo "Płaca: $placa<br>";
+    //     }
+    // }
+    // $stmt16->close();
+
+    // echo "<br><br>";
+    // echo "Siedemnaste: <br>";
+    // $stmt17 = $conn->prepare("SELECT * FROM pracownicy WHERE stanowisko LIKE '%ca' AND placa > 1500");
+    // $stmt17->execute();
+    // $stmt17->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    // $stmt17->store_result();
+
+    // if ($stmt17->num_rows > 0) {
+    //     while ($stmt17->fetch()) {
+    //         echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+    //     }
+    // }
+    // $stmt17->close();
+
+    // echo "<br><br>";
+    // echo "Osiemnaste: <br>";
+    // $stmt18 = $conn->prepare("SELECT DISTINCT imie FROM pracownicy WHERE nazwisko LIKE '_o%' ORDER BY imie DESC");
+    // $stmt18->execute();
+    // $stmt18->bind_result($imie);
+    // $stmt18->store_result();
+
+    // if ($stmt18->num_rows > 0) {
+    //     while ($stmt18->fetch()) {
+    //         echo "Imię: $imie<br>";
+    //     }
+    // }
+    // $stmt18->close();
+
+
+    $conn = mysqli_connect("localhost","root","","uczelnie");
+    if (mysqli_connect_errno()) {
+        echo "Coś się nie udało: " . mysqli_connect_error();
+        exit();
     }
-    $stanowisko = "asystent";
-    $stmt = $conn->prepare("SELECT * FROM pracownicy WHERE nazwisko='Kowalski'");
+
+    $stmt = $conn->prepare("SELECT imie, nazwisko, pesel FROM UczelniaA UNION SELECT imie, nazwisko, pesel FROM UczelniaB");
     $stmt->execute();
-    $stmt->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    $stmt->bind_result($imie, $nazwisko, $pesel);
     $stmt->store_result();
 
     if ($stmt->num_rows > 0) {
         while ($stmt->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+            echo "Imię: $imie, Nazwisko: $nazwisko, Pesel: $pesel<br>";
         }
+    } else {   
+        echo "Brak danych";
     }
+
     $stmt->close();
 
     echo "<br><br>";
-    echo "Drugie:<br>";
 
-    $stmt1 = $conn->prepare("SELECT * FROM pracownicy WHERE placa <1600");
-    $stmt1->execute();
-    $stmt1->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt1->store_result();
-
-    if ($stmt1->num_rows > 0) {
-        while ($stmt1->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt1->close();
-
-    echo "<br><br>";
-    echo "Drugie:<br>";
-
-    $stmt2 = $conn->prepare("SELECT * FROM pracownicy WHERE id>=3 AND id<=6");
+    $stmt2 = $conn->prepare("SELECT imie, nazwisko, pesel FROM UczelniaA UNION ALL SELECT imie, nazwisko, pesel FROM UczelniaB");
     $stmt2->execute();
-    $stmt2->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    $stmt2->bind_result($imie, $nazwisko, $pesel);
     $stmt2->store_result();
-
     if ($stmt2->num_rows > 0) {
         while ($stmt2->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+            echo "Imię: $imie, Nazwisko: $nazwisko, Pesel: $pesel<br>";
         }
+    } else {   
+        echo "Brak danych";
     }
+
     $stmt2->close();
 
-    echo "<br><br>";
+    echo "<br> <br>";
 
-    echo "Trzecie:<br>";
-    $stmt3 = $conn->prepare("SELECT * FROM pracownicy WHERE id BETWEEN 3 AND 6");
+    $stmt3 = $conn->prepare("SELECT imie, nazwisko, pesel FROM UczelniaA INTERSECT SELECT imie, nazwisko, pesel FROM UczelniaB");
     $stmt3->execute();
-    $stmt3->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    $stmt3->bind_result($imie, $nazwisko, $pesel);
     $stmt3->store_result();
-
     if ($stmt3->num_rows > 0) {
         while ($stmt3->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+            echo "Imię: $imie, Nazwisko: $nazwisko, Pesel: $pesel<br>";
         }
+    } else {   
+        echo "Brak danych";
     }
+
     $stmt3->close();
-    echo "<br><br>";
-    echo "Czwarte:<br>";
-
-    $stmt4 = $conn->prepare("SELECT * FROM pracownicy WHERE placa BETWEEN 1400 AND 1600 ORDER BY placa");
-    $stmt4->execute();
-    $stmt4->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt4->store_result();
-
-    if ($stmt4->num_rows > 0) {
-        while ($stmt4->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt4->close();
-    echo "<br><br>";
-    echo "Piąte:<br>";
-
-    $stmt5 = $conn->prepare("SELECT * FROM pracownicy WHERE placa BETWEEN 1400 AND 1600 ORDER BY placa");
-    $stmt5->execute();
-    $stmt5->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt5->store_result();
-
-    if ($stmt5->num_rows > 0) {
-        while ($stmt5->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt5->close();
-
-    echo "<br><br>";
-    echo "Szóste:<br>";
-    $stmt6 = $conn->prepare("SELECT * FROM pracownicy WHERE id IN(3,5,7)");
-    $stmt6->execute();
-    $stmt6->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt6->store_result();
-
-    if ($stmt6->num_rows > 0) {
-        while ($stmt6->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt6->close();
-    echo "<br><br>";
-    echo "Siódme:<br>";
-
-    $stmt7 = $conn->prepare("SELECT * FROM pracownicy WHERE imie LIKE 'Ka%'");
-    $stmt7->execute();
-    $stmt7->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt7->store_result();
-
-    if ($stmt7->num_rows > 0) {
-        while ($stmt7->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt7->close();
-    echo "<br><br>";
-    echo "Ósme:<br>";
-
-    $stmt8 = $conn->prepare("SELECT * FROM pracownicy WHERE imie LIKE 'Ka%'");
-    $stmt8->execute();
-    $stmt8->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt8->store_result();
-
-    if ($stmt8->num_rows > 0) {
-        while ($stmt8->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt8->close();
-    echo "<br><br>";
-    echo "Dziewiąte:<br>";
-
-    $stmt9 = $conn->prepare("SELECT * FROM pracownicy WHERE placa>1400 AND stanowisko <>'kierownik' AND pesel IS NOT NULL");
-    $stmt9->execute();
-    $stmt9->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt9->store_result();
-
-    if ($stmt9->num_rows > 0) {
-        while ($stmt9->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt9->close();
-
-
-    echo "<br><br>";
-    echo "Dziesiąte: <br>";
-
-    $stmt10 = $conn->prepare("SELECT nazwisko FROM pracownicy ORDER BY nazwisko");
-    $stmt10->execute();
-    $stmt10->bind_result($nazwisko);
-    $stmt10->store_result();
-
-    if ($stmt10->num_rows > 0) {
-        while ($stmt10->fetch()) {
-            echo "Nazwisko: $nazwisko<br>";
-        }
-    }
-    $stmt10->close();
-
-    echo "<br><br>";
-    echo "Jedenaste: <br>";
-
-    $stmt11 = $conn->prepare("SELECT DISTINCT nazwisko FROM pracownicy ORDER BY nazwisko");
-    $stmt11->execute();
-    $stmt11->bind_result($nazwisko);
-    $stmt11->store_result();
-
-    if ($stmt11->num_rows > 0) {
-        while ($stmt11->fetch()) {
-            echo "Nazwisko: $nazwisko<br>";
-        }
-    }
-    $stmt11->close();
-    echo "<br><br>";
-    echo "Dwunaste: <br>";
-
-    $stmt12 = $conn->prepare("SELECT * FROM pracownicy ORDER BY nazwisko LIMIT 5");
-    $stmt12->execute();
-    $stmt12->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt12->store_result();
-
-    if ($stmt12->num_rows > 0) {
-        while ($stmt12->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt12->close();
-
-    echo "<br><br>";
-    echo "Trzynaste: <br>";
-
-    $stmt13 = $conn->prepare("SELECT * FROM pracownicy ORDER BY nazwisko  limit 3 offset 4");
-    $stmt13->execute();
-    $stmt13->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt13->store_result();
-
-    if ($stmt13->num_rows > 0) {
-        while ($stmt13->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt13->close();
-    echo "<br><br>";
-
-    echo "Czternaste:";
-    $stmt14 = $conn->prepare("SELECT DISTINCT stanowisko FROM pracownicy WHERE stanowisko LIKE '%k%'");
-    $stmt14->execute();
-    $stmt14->bind_result($stanowisko);
-    $stmt14->store_result();
-
-    if ($stmt14->num_rows > 0) {
-        while ($stmt14->fetch()) {
-            echo "Stanowisko: $stanowisko<br>";
-        }
-    }
-    $stmt14->close();
-
-    echo "<br><br>";
-    echo "Piętnaste:";
-    $stmt15 = $conn->prepare("SELECT * FROM pracownicy WHERE nazwisko LIKE '%ski' ORDER BY imie");
-    $stmt15->execute();
-    $stmt15->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt15->store_result();
-
-    if ($stmt15->num_rows > 0) {
-        while ($stmt15->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt15->close();
-
-    echo "<br><br>";
-    echo "Szesnaste:";
-    $stmt16 = $conn->prepare("SELECT DISTINCT placa FROM pracownicy WHERE imie LIKE 'A%' OR imie LIKE 'K%'");
-    $stmt16->execute();
-    $stmt16->bind_result($placa);
-    $stmt16->store_result();
-
-    if ($stmt16->num_rows > 0) {
-        while ($stmt16->fetch()) {
-            echo "Płaca: $placa<br>";
-        }
-    }
-    $stmt16->close();
-
-    echo "<br><br>";
-    echo "Siedemnaste:";
-    $stmt17 = $conn->prepare("SELECT * FROM pracownicy WHERE stanowisko LIKE '%ca' AND placa > 1500");
-    $stmt17->execute();
-    $stmt17->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
-    $stmt17->store_result();
-
-    if ($stmt17->num_rows > 0) {
-        while ($stmt17->fetch()) {
-            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
-        }
-    }
-    $stmt17->close();
-
-    echo "<br><br>";
-    echo "Osiemnaste:";
-    $stmt18 = $conn->prepare("SELECT DISTINCT imie FROM pracownicy WHERE nazwisko LIKE '_o%' ORDER BY imie DESC");
-    $stmt18->execute();
-    $stmt18->bind_result($imie);
-    $stmt18->store_result();
-
-    if ($stmt18->num_rows > 0) {
-        while ($stmt18->fetch()) {
-            echo "Imię: $imie<br>";
-        }
-    }
-    $stmt18->close();
     ?>
 </body>
 
