@@ -1,0 +1,14 @@
+SELECT * FROM pracownicy WHERE nazwisko='Kowalski';
+SELECT * FROM pracownicy WHERE placa <1600;
+SELECT * FROM pracownicy WHERE id>=3 AND id<=6;
+SELECT * FROM pracownicy WHERE id BETWEEN 3 AND 6;
+SELECT * FROM pracownicy WHERE placa BETWEEN 1400 AND 1600 ORDER BY placa;
+SELECT * FROM pracownicy WHERE placa BETWEEN 1400 AND 1600 ORDER BY placa;
+SELECT * FROM pracownicy WHERE id IN(3,5,7);
+SELECT * FROM pracownicy WHERE imie LIKE 'Ka%';
+SELECT * FROM pracownicy WHERE imie LIKE 'Ka%';
+SELECT * FROM pracownicy WHERE placa>1400 AND stanowisko <>'kierownik' AND pesel IS NOT NULL;
+SELECT nazwisko FROM pracownicy ORDER BY nazwisko;
+SELECT DISTINCT nazwisko FROM pracownicy ORDER BY nazwisko;
+SELECT * FROM pracownicy ORDER BY nazwisko LIMIT 5;
+SELECT * FROM pracownicy ORDER BY nazwisko LIMIT 3 OFFSET 4;
