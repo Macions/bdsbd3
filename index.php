@@ -552,6 +552,74 @@
     $stmt13->close();
     echo "<br><br>";
 
+    echo "Czternaste:";
+    $stmt14 = $conn->prepare("SELECT DISTINCT stanowisko FROM pracownicy WHERE stanowisko LIKE '%k%'");
+    $stmt14->execute();
+    $stmt14->bind_result($stanowisko);
+    $stmt14->store_result();
+
+    if ($stmt14->num_rows > 0) {
+        while ($stmt14->fetch()) {
+            echo "Stanowisko: $stanowisko<br>";
+        }
+    }
+    $stmt14->close();
+
+    echo "<br><br>";
+    echo "Piętnaste:";
+    $stmt15 = $conn->prepare("SELECT * FROM pracownicy WHERE nazwisko LIKE '%ski' ORDER BY imie");
+    $stmt15->execute();
+    $stmt15->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    $stmt15->store_result();
+
+    if ($stmt15->num_rows > 0) {
+        while ($stmt15->fetch()) {
+            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+        }
+    }
+    $stmt15->close();
+
+    echo "<br><br>";
+    echo "Szesnaste:";
+    $stmt16 = $conn->prepare("SELECT DISTINCT placa FROM pracownicy WHERE imie LIKE 'A%' OR imie LIKE 'K%'");
+    $stmt16->execute();
+    $stmt16->bind_result($placa);
+    $stmt16->store_result();
+
+    if ($stmt16->num_rows > 0) {
+        while ($stmt16->fetch()) {
+            echo "Płaca: $placa<br>";
+        }
+    }
+    $stmt16->close();
+
+    echo "<br><br>";
+    echo "Siedemnaste:";
+    $stmt17 = $conn->prepare("SELECT * FROM pracownicy WHERE stanowisko LIKE '%ca' AND placa > 1500");
+    $stmt17->execute();
+    $stmt17->bind_result($id, $imie, $nazwisko, $placa, $stanowisko, $pesel);
+    $stmt17->store_result();
+
+    if ($stmt17->num_rows > 0) {
+        while ($stmt17->fetch()) {
+            echo "ID: $id, imie: $imie, nazwisko: $nazwisko, płaca: $placa, stanowisko: $stanowisko, pesel: $pesel<br>";
+        }
+    }
+    $stmt17->close();
+
+    echo "<br><br>";
+    echo "Osiemnaste:";
+    $stmt18 = $conn->prepare("SELECT DISTINCT imie FROM pracownicy WHERE nazwisko LIKE '_o%' ORDER BY imie DESC");
+    $stmt18->execute();
+    $stmt18->bind_result($imie);
+    $stmt18->store_result();
+
+    if ($stmt18->num_rows > 0) {
+        while ($stmt18->fetch()) {
+            echo "Imię: $imie<br>";
+        }
+    }
+    $stmt18->close();
     ?>
 </body>
 
