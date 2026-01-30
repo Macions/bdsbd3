@@ -682,8 +682,6 @@ $ilosc_dni_obiadowych = 4;
     
     // $stmt3->close();
     
-
-
     // echo date("Y-m-d") . "<br/>";
     // echo date("d-m-Y") . "<br/>";
     // echo date("G:i:s") . "<br/>";
@@ -714,30 +712,95 @@ $ilosc_dni_obiadowych = 4;
     
 
     //     $temps=array(2,3,8,12,17,22,28,26,18,8,4);
-// print "<pre>";
-// print_r ($temps);
-// print "</pre>";
+    // print "<pre>";
+    // print_r ($temps);
+    // print "</pre>";
     
 
-    $temps = array(
-        "sty" => 2,
-        "lut" => 3,
-        "mar" => 8,
-        "kwi" => 12,
-        "maj" => 17,
-        "cze" => 22,
-        "lip" => 29,
-        "sie" => 26,
-        "wrz" => 18,
-        "paź" => 13,
-        "lis" => 8,
-        "gru" => 4
+    // $temps = array(
+    //     "sty" => 2,
+    //     "lut" => 3,
+    //     "mar" => 8,
+    //     "kwi" => 12,
+    //     "maj" => 17,
+    //     "cze" => 22,
+    //     "lip" => 29,
+    //     "sie" => 26,
+    //     "wrz" => 18,
+    //     "paź" => 13,
+    //     "lis" => 8,
+    //     "gru" => 4
+    // );
+    
+    // print "<pre>";
+    // print_r($temps);
+    // print "</pre>";
+    
+    // $osoba["imie"] = "Jan";
+    // $osoba["nazwisko"] = "Kowalski";
+    // $osoba["wiek"] = 27;
+    // echo $osoba["nazwisko"];
+    
+    // foreach ($osoba as $k => $v) {
+    //     echo "osoba[$k]=$v</br>";
+    // }
+    
+    // Zadeklaruj tablicę asocjacyjną która będzie przechowywała miejscowosc, ilość osób i nazwisko burmistrza wyświetl to przy użyciu forEach
+    $miejscowosc = array(
+        array(
+
+            "miejscowosc" => "Łowicz",
+            "ilosc" => "26.10tys.",
+            "burmistrz" => "Siewiera"
+        ),
+        array(
+            "miejscowosc" => "Bolimów",
+            "ilosc" => "859",
+            "burmistrz" => "Słojewska"
+        ),
+        array(
+            "miejscowosc" => "Kutno",
+            "ilosc" => "40.484tys.",
+            "burmistrz" => "Sikora"
+        )
     );
 
-    print "<pre>";
-    print_r($temps);
-    print "</pre>";
+    foreach ($miejscowosc as $k => $v) {
+        echo "$k: miejscowość: " . $v["miejscowosc"] . ", ilość: " . $v["ilosc"] . ", burmistrz: " . $v["burmistrz"] . "</br>";
+    }
 
+    //W tablicy indeksowanej o 3 indeksach zamieść 3 ulubione samochody podając markę, rocznik i typ (tablica asocjacyjne) i wyświetl przez forEach
+    
+    $samochody = array(
+        array(
+            "marka" => "BMW",
+            "rocznik" => 2020,
+            "typ" => "SUV"
+        ),
+        array(
+            "marka" => "Audi",
+            "rocznik" => 2019,
+            "typ" => "Sedan"
+        ),
+        array(
+            "marka" => "Toyota",
+            "rocznik" => 2021,
+            "typ" => "Hatchback"
+        )
+    );
+    echo "<br>";
+
+    foreach ($samochody as $k => $v) {
+        echo "Samochód " . ($k + 1) . ": ";
+        foreach ($v as $key => $value) {
+            echo "$key: $value, ";
+        }
+        echo "</br>";
+    }
+
+    $file = "test.txt";
+    $zawartosc = file_get_contents($file);
+    echo $zawartosc;
     ?>
 </body>
 
