@@ -746,61 +746,128 @@ $ilosc_dni_obiadowych = 4;
     // }
     
     // Zadeklaruj tablicę asocjacyjną która będzie przechowywała miejscowosc, ilość osób i nazwisko burmistrza wyświetl to przy użyciu forEach
-    $miejscowosc = array(
-        array(
-
-            "miejscowosc" => "Łowicz",
-            "ilosc" => "26.10tys.",
-            "burmistrz" => "Siewiera"
-        ),
-        array(
-            "miejscowosc" => "Bolimów",
-            "ilosc" => "859",
-            "burmistrz" => "Słojewska"
-        ),
-        array(
-            "miejscowosc" => "Kutno",
-            "ilosc" => "40.484tys.",
-            "burmistrz" => "Sikora"
-        )
-    );
-
-    foreach ($miejscowosc as $k => $v) {
-        echo "$k: miejscowość: " . $v["miejscowosc"] . ", ilość: " . $v["ilosc"] . ", burmistrz: " . $v["burmistrz"] . "</br>";
-    }
-
-    //W tablicy indeksowanej o 3 indeksach zamieść 3 ulubione samochody podając markę, rocznik i typ (tablica asocjacyjne) i wyświetl przez forEach
+    // $miejscowosc = array(
+    //     array(
     
-    $samochody = array(
-        array(
-            "marka" => "BMW",
-            "rocznik" => 2020,
-            "typ" => "SUV"
-        ),
-        array(
-            "marka" => "Audi",
-            "rocznik" => 2019,
-            "typ" => "Sedan"
-        ),
-        array(
-            "marka" => "Toyota",
-            "rocznik" => 2021,
-            "typ" => "Hatchback"
-        )
-    );
-    echo "<br>";
+    //         "miejscowosc" => "Łowicz",
+    //         "ilosc" => "26.10tys.",
+    //         "burmistrz" => "Siewiera"
+    //     ),
+    //     array(
+    //         "miejscowosc" => "Bolimów",
+    //         "ilosc" => "859",
+    //         "burmistrz" => "Słojewska"
+    //     ),
+    //     array(
+    //         "miejscowosc" => "Kutno",
+    //         "ilosc" => "40.484tys.",
+    //         "burmistrz" => "Sikora"
+    //     )
+    // );
+    
+    // foreach ($miejscowosc as $k => $v) {
+    //     echo "$k: miejscowość: " . $v["miejscowosc"] . ", ilość: " . $v["ilosc"] . ", burmistrz: " . $v["burmistrz"] . "</br>";
+    // }
+    
+    // //W tablicy indeksowanej o 3 indeksach zamieść 3 ulubione samochody podając markę, rocznik i typ (tablica asocjacyjne) i wyświetl przez forEach
+    
+    // $samochody = array(
+    //     array(
+    //         "marka" => "BMW",
+    //         "rocznik" => 2020,
+    //         "typ" => "SUV"
+    //     ),
+    //     array(
+    //         "marka" => "Audi",
+    //         "rocznik" => 2019,
+    //         "typ" => "Sedan"
+    //     ),
+    //     array(
+    //         "marka" => "Toyota",
+    //         "rocznik" => 2021,
+    //         "typ" => "Hatchback"
+    //     )
+    // );
+    // echo "<br>";
+    
+    // foreach ($samochody as $k => $v) {
+    //     echo "Samochód " . ($k + 1) . ": ";
+    //     foreach ($v as $key => $value) {
+    //         echo "$key: $value, ";
+    //     }
+    //     echo "</br>";
+    // }
+    
+    // $file = "test.txt";
+    // $zawartosc = file_get_contents($file);
+    // echo $zawartosc;
+    
+    // $conn = new mysqli("localhost", "root", "", "sklep_obuwniczy");
+    
+    // if (!$conn) {
+    //     die($conn->connect_errno);
+    // }
+    
+    // $stmt = $conn->prepare("SELECT imie, nazwisko FROM klienci");
+    // $stmt->execute();
+    
+    // echo "<table><tr>";
+    // echo "<th>Imie</th>";
+    // echo "<th>Nazwisko</th></tr>";
+    // $result = $stmt->get_result();
+    // while ($row = $result->fetch_assoc()) {
+    
+    //     echo "<tr><td>" . $row["imie"] . "</td><td>" . $row["nazwisko"] . "</td></tr>";
+    // }
+    // echo "</table>";
+    
+    // $stmt2 = $conn->prepare("SELECT imie, nazwisko FROM klienci");
+    // $stmt2->execute();
+    
+    // echo "<table><tr>";
+    // echo "<th>Imie</th>";
+    // echo "<th>Nazwisko</th></tr>";
+    // $result2 = $stmt2->get_result();
+    // while ($row = $result2->fetch_assoc()) {
+    
+    //     echo "<tr><td>" . $row["imie"] . "</td><td>" . $row["nazwisko"] . "</td></tr>";
+    // }
+    // echo "</table>";
+    
+    $owoce = ["banan", "jabłko", "pomarańcza"];
 
-    foreach ($samochody as $k => $v) {
-        echo "Samochód " . ($k + 1) . ": ";
-        foreach ($v as $key => $value) {
-            echo "$key: $value, ";
-        }
-        echo "</br>";
+    foreach ($owoce as $owoc) {
+        echo $owoc . "<br>";
     }
 
-    $file = "test.txt";
-    $zawartosc = file_get_contents($file);
-    echo $zawartosc;
+    $owoce[] = "gruszka";
+    print_r($owoce);
+
+    unset($owoce[0]);
+
+    echo count($owoce);
+
+
+    echo " <br><br>Zadanie 2";
+
+    sort($owoce);
+    echo "<br>Posrotowwane:<br>";
+    print_r($owoce);
+
+    shuffle($owoce);
+    echo "<br>Losowano porobione:<br>";
+    print_r($owoce);
+
+    $liczby = [5, 10, 15, 20];
+    $pofiltrowane = array_filter($liczby, function ($x) {
+        return $x > 10; });
+    $suma = array_sum($pofiltrowane);
+    echo "<br>Przefiltrowane (>10): ";
+    print_r($pofiltrowane);
+    echo "<br>Suma: " . $suma;
+
+    $liczby2 = [7, 3, 1, 6, 9, 5, 4, 10, 2, 2];
+    
     ?>
 </body>
 
