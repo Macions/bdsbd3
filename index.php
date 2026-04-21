@@ -834,41 +834,72 @@ $ilosc_dni_obiadowych = 4;
     // }
     // echo "</table>";
     
-    $owoce = ["banan", "jabłko", "pomarańcza"];
-
-    foreach ($owoce as $owoc) {
-        echo $owoc . "<br>";
-    }
-
-    $owoce[] = "gruszka";
-    print_r($owoce);
-
-    unset($owoce[0]);
-
-    echo count($owoce);
-
-
-    echo " <br><br>Zadanie 2";
-
-    sort($owoce);
-    echo "<br>Posrotowwane:<br>";
-    print_r($owoce);
-
-    shuffle($owoce);
-    echo "<br>Losowano porobione:<br>";
-    print_r($owoce);
-
-    $liczby = [5, 10, 15, 20];
-    $pofiltrowane = array_filter($liczby, function ($x) {
-        return $x > 10; });
-    $suma = array_sum($pofiltrowane);
-    echo "<br>Przefiltrowane (>10): ";
-    print_r($pofiltrowane);
-    echo "<br>Suma: " . $suma;
-
-    $liczby2 = [7, 3, 1, 6, 9, 5, 4, 10, 2, 2];
+    // $owoce = ["banan", "jabłko", "pomarańcza"];
     
+    // foreach ($owoce as $owoc) {
+    //     echo $owoc . "<br>";
+    // }
+    
+    // $owoce[] = "gruszka";
+    // print_r($owoce);
+    
+    // unset($owoce[0]);
+    
+    // echo count($owoce);
+    
+
+    // echo " <br><br>Zadanie 2";
+    
+    // sort($owoce);
+    // echo "<br>Posrotowwane:<br>";
+    // print_r($owoce);
+    
+    // shuffle($owoce);
+    // echo "<br>Losowano porobione:<br>";
+    // print_r($owoce);
+    
+    // $liczby = [5, 10, 15, 20];
+    // $pofiltrowane = array_filter($liczby, function ($x) {
+    //     return $x > 10; });
+    // $suma = array_sum($pofiltrowane);
+    // echo "<br>Przefiltrowane (>10): ";
+    // print_r($pofiltrowane);
+    // echo "<br>Suma: " . $suma;
+    
+    // $liczby2 = [7, 3, 1, 6, 9, 5, 4, 10, 2, 2];
+    
+
+    // Zadanie 1
+    
+    // Stworz baze danych pt. cwiczenia w niej tabele produkt w tabelce: 
+    // id, nazwa, number_produktu, data_produkcji, cena_produktu (double),  
+    
+    // $conn = new mysqli("localhost", "root", "", "przedsiebiorstwo3");
+    // if (!$conn) {
+    //     die($conn->connect_errno);
+    // }
+    
+    // $stmt = $conn->prepare("SELECT * FROM pracownicy, stanowiska");
+    // $stmt->execute();
+    // echo "<table><tr>";
+    // echo "<th>ID</th>";
+    // echo "<th>Imie</th>";
+    // echo "<th>Nazwisko</th>";
+    // echo "<th>Płaca</th>";
+    // echo "<th>Stanowisko</th>";
+    // echo "<th>Pesel</th></tr>";
+    // $result = $stmt->get_result();
+    // while ($row = $result->fetch_assoc()) {
+    
+    //     echo "<tr><td>" . $row["id"] . "</td><td>" . $row["imie"] . "</td><td>" . $row["nazwisko"] . "</td><td>" . $row["placa"] . "</td><td>" . $row["stanowisko"] . "</td><td>" . $row["pesel"] . "</td></tr>";
+    // }
     ?>
+    <form action="ds.php" method="get">
+        <input type="text" name="imie" placeholder="Imię...">
+        <input type="number" name="ilosc_dni_obiadowych" placeholder="Podaj ilość dni obiadowych...">
+        <input type="submit" value="Oblicz">
+    </form>
 </body>
+
 
 </html>
